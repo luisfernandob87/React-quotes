@@ -20,10 +20,10 @@ const Quote = () => {
   document.body.style.background = newColor;
 
   return (
-    <div style={{color:newColor}}>
-      <p>{quotes[index].quote}</p>
-      <p>{quotes[index].author}</p>
-      <button onClick={chgQuote}>Next</button>
+    <div className="container" style={{color:newColor}}>
+      <p><i className="fa-solid fa-quote-left"></i> {quotes[index].quote}</p>
+      <p>{quotes[index].author}</p>   
+      <button style={{backgroundColor:newColor }} onClick={chgQuote}><picture><i className="fa-solid fa-chevron-right"></i></picture></button>
     </div>
   );
 };
